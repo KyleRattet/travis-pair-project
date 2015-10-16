@@ -17,13 +17,4 @@ describe("Testing", function() {
       done();
     });
   });
-
-  it("should return false on 404", function(done){
-    chai.request(server)
-    .get("/")
-    .end(function(err, res) {
-      res.should.have.status(404);
-      done();
-    });
-  });
 });
