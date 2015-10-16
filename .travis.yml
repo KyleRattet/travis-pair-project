@@ -13,3 +13,12 @@ before_script:
 
 script:
   - mocha
+
+deploy:
+  provider: heroku
+  api_key:
+    secure:
+  app:
+  on:
+    branch: master
+    node: '0.12'
